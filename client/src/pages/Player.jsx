@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+const BACKEND_URL=import.meta.env.VITE_BACKEND_URL
 
+console.log(BACKEND_URL);
 const Player = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -14,7 +16,7 @@ const Player = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const player= await axios.post('/api/players/create', formData);
+      const player= await axios.post(`${BACKEND_URL}/api/players/create`, formData);
       if(player)
         {
             console.log(player);

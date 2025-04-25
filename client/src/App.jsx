@@ -3,6 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Admin from './pages/AdminPanel.jsx';
 import Player from './pages/Player.jsx';
 
+
 const App = () => {
   return (
     <div style={{ padding: '2rem' }}>
